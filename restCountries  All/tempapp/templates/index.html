@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+</head>
+
+<body>
+      <!-- <form method = "get">
+        <label name ="country">Country Name:</label>
+        <input type="text" name="country">
+        <input  class="submit" type="submit" value="Submit">
+      </form> <br> -->
+    <div class="main">
+      {% for i in response %}
+       
+        <div class="main-container">
+        <div class="card">
+          <img src="{{i.flags.png}}">
+          <div class="container">
+           
+            <p>country: <b>{{i.name.common}}</b></p> 
+            <p>capital: <b>{{i.capital}}</b></p> 
+            <p>population: <b>{{i.population}}</b></p> 
+         
+          </div>
+        </div>
+        </div>
+      {% endfor %}
+</body>
+
+</html>
+{% endblock %}
